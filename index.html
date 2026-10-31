@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Petalia – Plantas y flores</title>
+<meta name="description" content="Plantas, hijos de planta y flores cultivadas con cariño. Entregas en Los Limones, Montecristi.">
+<meta name="theme-color" content="#25402f">
+<meta property="og:title" content="Petalia – Plantas y flores">
+<meta property="og:description" content="Plantas, hijos de planta y flores cultivadas con cariño.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Londrina+Solid:wght@400;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef5ea;--ink:#16261b;--moss:#25402f;--on-moss:#eef5ea;--fern:#4f8a5b;--mist:#d8e8d3;--card:#fbfdf9;--line:#c5d8c0;--petal:#f0adc0;--onpetal:#2a1620;--low:#a24a25;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a13;--ink:#e6efe1;--moss:#1d3626;--on-moss:#e6efe1;--fern:#7dbd89;--mist:#18281d;--card:#15231a;--line:#27402f;--low:#e69a72;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a13;--ink:#e6efe1;--moss:#1d3626;--on-moss:#e6efe1;--fern:#7dbd89;--mist:#18281d;--card:#15231a;--line:#27402f;--low:#e69a72;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 clamp(1rem,.95rem + .25vw,1.15rem)/1.6 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--petal);outline-offset:3px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;padding-bottom:16px}
+.logo{display:flex;align-items:flex-start;gap:3px;text-decoration:none;font:900 clamp(1.9rem,5vw,2.6rem)/1 "Londrina Solid","Arial Narrow",Impact,sans-serif;letter-spacing:.03em;text-transform:uppercase}
+.leaf{width:.52em;height:.52em;margin-top:-.08em}
+.bar{flex-wrap:wrap}
+@media(max-width:560px){nav{width:100%;justify-content:space-between;background:rgba(255,255,255,.09);border-radius:999px;padding:4px 20px}nav a{padding:8px 0}}
+nav{display:flex;gap:clamp(12px,3vw,32px);font-weight:700;font-size:.95rem}
+nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--petal)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(70% 45% at 88% 22%,rgba(240,173,192,.22),transparent 70%),radial-gradient(60% 40% at 8% 95%,rgba(124,188,138,.22),transparent 70%),var(--moss);color:var(--on-moss);border-radius:0 0 clamp(32px,7vw,96px) clamp(32px,7vw,96px)}
+.hero .wrap{display:grid;gap:20px;align-items:center;padding-top:clamp(4px,3vw,56px);padding-bottom:clamp(56px,8vw,112px)}
+.hero .wrap{position:relative;z-index:1}
+.deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero h1{font-size:clamp(2.3rem,7vw,4.6rem);max-width:11em}
+.hero p{max-width:32em;margin:18px 0 26px;opacity:.92}
+.bloom{order:-1;justify-self:center;width:min(46vw,250px);aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;padding:20px 14px 0;overflow:hidden;border-radius:999px 999px 28px 28px;border:1.5px solid rgba(255,255,255,.22);background:radial-gradient(circle at 50% 32%,rgba(240,173,192,.32),rgba(255,255,255,.05) 64%)}
+.bloom svg{width:84%;height:auto;display:block;transform-origin:50% 36%;filter:drop-shadow(0 10px 14px rgba(0,0,0,.3));animation:open 1.3s cubic-bezier(.2,.8,.2,1) both}
+@keyframes open{from{transform:scale(.2) rotate(-50deg);opacity:0}}
+@media(min-width:760px){.hero .wrap{grid-template-columns:1.15fr 1fr}.bloom{width:min(34vw,400px);order:0}}
+.btn{display:inline-block;border:0;border-radius:999px;padding:12px 24px;font:700 1rem "Nunito Sans",sans-serif;cursor:pointer;text-decoration:none;background:var(--petal);color:var(--onpetal);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--moss);color:var(--on-moss)}
+.btn.ghost{background:var(--mist);color:var(--ink)}
+.btn.sm{padding:9px 18px;width:100%}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:-28px auto 0;width:max-content;max-width:calc(100% - 32px);background:var(--card);border:1px solid var(--line);border-radius:28px;padding:14px 26px;font-weight:700;font-size:.95rem;position:relative}
+section{padding:clamp(48px,7vw,96px) 0 0}
+h2{font-size:clamp(1.7rem,4.5vw,2.6rem);margin-bottom:8px}
+.sub{margin:0 0 24px;opacity:.8;max-width:40em}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.chip{border:1.5px solid var(--fern);background:none;color:var(--ink);border-radius:999px;padding:7px 18px;font:700 .95rem "Nunito Sans",sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--fern);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 14px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,1fr);gap:32px 20px}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1200px){.grid{grid-template-columns:repeat(5,1fr)}}
+.arch{background:var(--mist);border-radius:999px 999px 16px 16px;aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;padding:18px 10px 0;overflow:hidden;transition:transform .2s}
+.item{background:var(--card);border:1px solid var(--line);border-radius:30px 30px 20px 20px;padding:10px 10px 14px;box-shadow:0 10px 26px -16px rgba(0,0,0,.35);transition:transform .2s}
+.item:hover{transform:translateY(-4px)}
+.arch{position:relative;background:var(--mist);background:radial-gradient(circle at 50% 34%,color-mix(in srgb,var(--c,#f0adc0) 40%,transparent),transparent 68%),var(--mist);box-shadow:inset 0 0 0 1px var(--line)}
+.pill{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:1;white-space:nowrap;background:var(--fern);color:var(--bg);font-size:.78rem;font-weight:700;padding:3px 12px;border-radius:99px}
+.item.low .pill{background:var(--low)}
+.item.out .pill{background:#8a8f8a}
+.item.out .arch svg{filter:grayscale(.9);opacity:.5}
+.price{font-family:"Young Serif",Georgia,serif;font-size:1.15rem;margin:2px 0 4px}
+#catalogo::before{content:"";position:absolute;right:0;top:36px;width:150px;height:150px;background:var(--fern);opacity:.1;border-radius:0 100% 0 100%;transform:rotate(15deg);pointer-events:none}
+section{position:relative}
+.arch svg{width:78%;height:auto;max-height:100%}
+.arch img{max-width:none;width:calc(100% + 20px);height:calc(100% + 18px);margin:-18px -10px 0;object-fit:cover}
+.item{display:flex;flex-direction:column;text-align:center}.item h3{font-size:1.15rem;margin:14px 0 4px;min-height:2.3em}.item .btn.sm{margin-top:auto}
+.price{font-weight:700}
+.stock{font-size:.88rem;margin:2px 0 10px;color:var(--fern);font-weight:700}
+.stock.low{color:var(--low)}
+.stock.out{color:#8a8f8a}
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:14px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px 20px 20px 70px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:18px;top:18px;width:38px;height:38px;border-radius:50%;background:var(--petal);color:var(--onpetal);font:400 1.2rem/38px "Young Serif",serif;text-align:center}
+.quotes,.contact{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--petal);border-radius:4px 22px 22px 4px;padding:18px 20px}
+blockquote small{display:block;margin-top:8px;opacity:.7}
+.note{margin-top:18px;padding:14px 18px;border:1.5px dashed var(--fern);border-radius:16px}
+.contact div{background:var(--card);border:1px solid var(--line);border-radius:22px 22px 4px 22px;padding:20px}
+.contact h3{font-size:1.15rem;margin-bottom:6px}
+.cpanel{display:grid;gap:24px;background:radial-gradient(70% 60% at 90% 10%,rgba(240,173,192,.22),transparent 70%),radial-gradient(60% 50% at 5% 100%,rgba(124,188,138,.22),transparent 70%),var(--moss);color:var(--on-moss);border-radius:36px;padding:clamp(24px,5vw,56px)}
+@media(min-width:760px){.cpanel{grid-template-columns:1fr 1fr;align-items:center}}
+.cpanel p{opacity:.92;margin:8px 0 20px}
+.clist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.clist li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.09);border-radius:20px;padding:14px 16px}
+.clist svg{width:26px;height:26px;flex:none;stroke:var(--petal);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.arch,.item h3{cursor:pointer}
+.x{position:absolute;top:14px;left:14px;z-index:3;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;padding:0;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.x[hidden]{display:none}
+.x svg{width:20px;height:20px}
+#dlg{padding-top:68px}
+#det{padding:0;width:min(94vw,480px);overflow:auto}
+.dimg{position:relative;aspect-ratio:1/1;display:flex;align-items:flex-end;justify-content:center;padding:70px 28px 0;background:radial-gradient(circle at 50% 36%,color-mix(in srgb,var(--c,#f0adc0) 40%,transparent),transparent 70%),var(--mist);overflow:hidden}
+.dimg svg{width:68%;height:auto;max-height:100%}
+.dimg.photo{padding:0}
+.dimg img{width:100%;height:100%;object-fit:cover;display:block}
+.thumbs{display:flex;gap:8px;padding:12px 22px 0;overflow-x:auto}
+.thumbs:empty{display:none}
+.thumbs button{flex:none;width:56px;height:56px;padding:0;border:2px solid var(--line);border-radius:12px;overflow:hidden;background:none;cursor:pointer}
+.thumbs button[aria-pressed="true"]{border-color:var(--fern)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.dbody{padding:16px 22px 22px}
+.dbody h3{font-size:1.5rem}
+.dcat{margin:2px 0 0;opacity:.7;font-size:.9rem}
+.dprice{font-family:"Young Serif",Georgia,serif;font-size:1.4rem;margin:10px 0 2px}
+.dbody .stock{margin:0 0 12px}
+.dbody .d{margin:0 0 18px}
+blockquote{position:relative;padding-top:38px}
+blockquote::before{content:"“";position:absolute;top:4px;left:18px;font:400 3rem/1 "Young Serif",Georgia,serif;color:var(--petal)}
+#legal{padding-top:68px;width:min(94vw,520px);max-height:88vh;overflow:auto}
+#legal h3{margin-bottom:12px}
+#legal p{margin:0 0 12px}
+#legal .borrador{font-size:.88rem;opacity:.75;border-top:1px solid var(--line);padding-top:12px}
+footer a{text-underline-offset:3px}
+#msg.err{color:var(--low)}
+.grow{transform-box:fill-box;transform-origin:50% 100%;animation:grow .9s cubic-bezier(.2,.9,.3,1.25) both;animation-delay:var(--d,0s)}
+.fxw:not(.in) .grow{animation-play-state:paused}
+@keyframes grow{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.sway{animation:sway 5.5s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-2.4deg)}to{transform:rotate(2.4deg)}}
+.item:hover .sway{animation-duration:2.6s}
+.fall{opacity:0;animation:fall 7s linear infinite;animation-delay:var(--s,0s)}
+@keyframes fall{0%{transform:translate(0,0) rotate(0);opacity:0}12%{opacity:.9}100%{transform:translate(-14px,70px) rotate(200deg);opacity:0}}
+.twinkle{animation:tw 2.8s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15}}
+.bloom .hs{transform-origin:50px 120px;animation:hsway 6s ease-in-out infinite alternate}
+/* Los dibujos de las tarjetas y del detalle son fijos: se reemplazarán por fotos reales */
+.fx *{animation:none!important}
+.fx .fall{display:none}
+@keyframes hsway{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+.pop{animation:pop .4s ease}
+@keyframes pop{40%{transform:scale(1.1)}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.search{display:block;width:100%;max-width:380px;margin:0 0 16px;border-radius:999px;padding:11px 20px;font:inherit;-webkit-appearance:none;appearance:none}
+.grid:empty::after{content:"No encontramos ese nombre.";grid-column:1/-1;opacity:.7}
+footer{margin-top:clamp(56px,8vw,112px);background:var(--moss);color:var(--on-moss);padding:30px 0 96px;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cartbar{position:fixed;left:0;right:0;bottom:0;display:none;justify-content:center;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));pointer-events:none;z-index:5}
+.cartbar.on{display:flex}
+.cartbar button{pointer-events:auto;box-shadow:0 6px 24px rgba(0,0,0,.28);padding:14px 28px}
+dialog{border:0;border-radius:26px;background:var(--card);color:var(--ink);padding:24px;width:min(94vw,460px);max-height:92vh}
+dialog::backdrop{background:rgba(10,20,14,.6)}
+#lines{list-style:none;margin:14px 0;padding:0;display:grid;gap:10px}
+#lines li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;background:var(--bg);border-radius:14px}
+.step{display:flex;align-items:center;gap:10px;font-weight:700}
+.step button{width:34px;height:34px;border-radius:50%;border:0;background:var(--mist);color:var(--ink);font:700 1.2rem/1 "Nunito Sans",sans-serif;cursor:pointer}
+.total{font-size:1.15rem;margin:0 0 4px}
+label{display:block;font-weight:700;margin:12px 0 4px}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:10px}
+.row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.row .btn{flex:1}
+.lbl{font-weight:700;margin:14px 0 6px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{margin:0}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:block;text-align:center;padding:12px 8px;border:1.5px solid var(--fern);border-radius:14px;font-weight:700;cursor:pointer;transition:background .15s}
+.seg input:checked+span{background:var(--fern);color:var(--bg)}
+.seg input:focus-visible+span{outline:3px solid var(--petal);outline-offset:2px}
+.hint{font-size:.9rem;opacity:.85;margin:8px 0 0}
+#msg{margin:14px 0 0;font-weight:700;color:var(--fern)}
+.btn[hidden]{display:none}
+.sending{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:8px 0}
+.sending[hidden]{display:none}
+.mail{width:min(70vw,240px);height:auto;overflow:visible}
+.mail .bk{fill:var(--mist);stroke:var(--fern);stroke-width:2}
+.mail .fr{fill:var(--card);stroke:var(--fern);stroke-width:2;stroke-linejoin:round}
+.mail .fp{fill:var(--fern);stroke:var(--fern);stroke-width:2;stroke-linejoin:round;transform-origin:100px 60px;animation:flap 2.8s infinite}
+.mail .env{transform-origin:100px 95px;animation:fly 2.8s ease-in infinite}
+.mail .fl{animation:drop 2.8s infinite}
+@keyframes drop{0%{transform:translateY(-34px);opacity:0}12%{opacity:1}38%,100%{transform:translateY(56px);opacity:1}}
+@keyframes flap{0%,34%{transform:scaleY(-1)}48%,100%{transform:scaleY(1)}}
+@keyframes fly{0%,64%{transform:translate(0,0) scale(1);opacity:1}92%,100%{transform:translate(80px,-80px) scale(.3);opacity:0}}
+.prog{width:min(70%,240px);height:8px;background:var(--mist);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;width:40%;background:var(--fern);border-radius:99px;animation:slide 1.2s ease-in-out infinite}
+@keyframes slide{from{transform:translateX(-100%)}to{transform:translateX(250%)}}
+#sTxt{font-weight:700;margin:0}
+#sSum{font-size:.85rem;opacity:.75;margin:0;word-break:break-word}
+.okicon{width:84px;height:84px}
+@keyframes pulse{50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.grow,.sway,.fall,.twinkle,.bloom .hs,.pop{animation:none!important}.mail .env,.mail .fl,.mail .fp{animation:none}.mail .fp{transform:scaleY(1)}.mail .fl{opacity:0}.mail,.prog i{animation:pulse 1.6s ease-in-out infinite}.prog i{width:100%}.bloom svg{animation:none}html{scroll-behavior:auto}.btn,.arch{transition:none}}
+</style>
+</head>
+<body>
+<div class="hero" id="top">
+  <svg class="deco" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M400 20C330 30 270 90 265 190C345 190 405 120 400 20Z" fill="#fff" opacity=".07"/>
+    <path d="M-10 480C50 470 110 520 120 600C50 610 -15 560 -10 480Z" fill="#fff" opacity=".07"/>
+    <path d="M380 420C330 430 300 470 305 530C355 525 390 480 380 420Z" fill="#7cbc8a" opacity=".18"/>
+    <g fill="#f0adc0"><ellipse cx="46" cy="150" rx="6" ry="12" transform="rotate(35 46 150)" opacity=".6"/><ellipse cx="330" cy="330" rx="5" ry="10" transform="rotate(-40 330 330)" opacity=".5"/><ellipse cx="70" cy="420" rx="5" ry="10" transform="rotate(60 70 420)" opacity=".45"/><ellipse cx="350" cy="560" rx="6" ry="12" transform="rotate(20 350 560)" opacity=".55"/><ellipse cx="200" cy="640" rx="4" ry="8" transform="rotate(-25 200 640)" opacity=".4"/></g>
+    <g fill="#fff" opacity=".35"><circle cx="120" cy="60" r="2"/><circle cx="300" cy="260" r="1.6"/><circle cx="30" cy="560" r="1.8"/></g>
+  </svg>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><span data-brand>Petalia</span><svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21C3 10 10 3 22 3c0 11-7 18-19 18z" fill="currentColor"/><path d="M3 21 14 10" stroke="var(--moss)" stroke-width="1.6" fill="none"/></svg></a>
+    <nav><a href="#catalogo">Catálogo</a><a href="#como">Cómo pedir</a><a href="#contacto">Contacto</a></nav>
+  </div>
+  <div class="wrap">
+    <div>
+      <h1>Plantas y flores para regalar y sembrar</h1>
+      <p>Cultivadas con cariño en casa. Elige lo que te guste, arma tu pedido y te confirmamos por teléfono.</p>
+      <a class="btn" href="#catalogo">Ver catálogo</a>
+    </div>
+    <div class="bloom" id="heroBloom"></div>
+  </div>
+</div>
+<div class="perks"><span>Cantidades limitadas</span><span>Entregas en Los Limones</span><span>Pedido en un minuto</span></div>
+
+<main class="wrap">
+  <section id="catalogo">
+    <h2>Catálogo</h2>
+    <p class="sub">Los hijos son retoños de nuestras plantas, listos para sembrar. Como hay pocas unidades, mira siempre cuántas quedan.</p>
+    <input class="search" id="find" type="search" placeholder="Buscar por nombre…" aria-label="Buscar por nombre">
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="como">
+    <h2>Cómo pedir</h2>
+    <p class="sub">Sin crear cuenta.</p>
+    <ol class="steps">
+      <li><b>Elige</b> y pulsa “Añadir” en lo que te guste.</li>
+      <li><b>Revisa</b> tu pedido, pon tu nombre y teléfono y envíalo.</li>
+      <li><b>Confirmamos</b> contigo por llamada o WhatsApp y coordinamos la entrega o recogida.</li>
+    </ol>
+  </section>
+
+  <section id="opiniones">
+    <h2>Opiniones de clientes</h2>
+    <p class="sub">Ejemplos de cómo se verán.</p>
+    <div class="quotes">
+      <blockquote>“La planta llegó sana y con instrucciones para cuidarla.”<small>Cliente de ejemplo</small></blockquote>
+      <blockquote>“Atención rápida y muy amable.”<small>Cliente de ejemplo</small></blockquote>
+    </div>
+    <p class="note">Aquí aparecerán los comentarios de clientes que inicien sesión con Google.</p>
+  </section>
+
+  <section id="contacto">
+    <div class="cpanel">
+      <div>
+        <h2>¿Hablamos?</h2>
+        <p>Escríbenos para pedidos especiales, dudas o para coordinar la recogida.</p>
+        <a class="btn" id="wa" href="#contacto">Escribir por WhatsApp</a>
+      </div>
+      <ul class="clist">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Horario</b><br>Lunes a sábado, 9:00 a. m. – 6:00 p. m.</div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Entregas</b><br>Solo en Los Limones, Montecristi.</div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><div><b>Para recoger</b><br>Te enviamos la ubicación por WhatsApp.</div></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 <span data-brand>Petalia</span>. Todos los derechos reservados.</span>
+    <span><a href="#privacidad" data-l="p">Privacidad</a> · <a href="#terminos" data-l="t">Términos</a></span>
+  </div>
+</footer>
+
+<div class="cartbar" id="cartbar"><button class="btn dark" id="openCart"></button></div>
+
+<dialog id="dlg">
+  <button class="x" type="button" id="cx" aria-label="Cerrar pedido"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg></button>
+  <form id="form">
+    <h3>Mi pedido</h3>
+    <ul id="lines"></ul>
+    <p class="total">Total: <b id="tot"></b></p>
+    <label for="n">Nombre</label><input id="n" required maxlength="60" autocomplete="name">
+    <label for="t">Teléfono</label><input id="t" type="tel" required maxlength="20" autocomplete="tel">
+    <p class="lbl" id="el">¿Cómo lo recibes?</p>
+    <div class="seg" role="radiogroup" aria-labelledby="el">
+      <label><input type="radio" name="e" value="r" checked><span>Recoger</span></label>
+      <label><input type="radio" name="e" value="d"><span>Entrega local*</span></label>
+    </div>
+    <p class="hint" id="hint">Te enviaremos la ubicación por WhatsApp para recogerlo.</p>
+    <div id="addr" hidden><label for="a">Dirección en Los Limones</label><input id="a" maxlength="120" autocomplete="street-address"></div>
+    <label for="o">Nota (opcional)</label><textarea id="o" rows="2" maxlength="200"></textarea>
+    <div class="row"><button class="btn dark" type="button" id="send">Enviar pedido</button><button class="btn ghost" type="button" id="cancel">Seguir viendo</button></div>
+    <p id="msg" role="status"></p>
+  </form>
+  <div class="sending" id="sending" hidden aria-live="polite">
+    <div id="scene"></div>
+    <svg class="okicon" id="okIcon" viewBox="0 0 84 84" hidden aria-hidden="true"><circle cx="42" cy="42" r="40" style="fill:var(--fern)"/><path d="M24 43l13 13 24-27" style="stroke:var(--bg)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="prog" id="prog"><i></i></div>
+    <p id="sTxt"></p>
+    <p id="sSum"></p>
+    <div class="row"><button class="btn dark" id="retry" type="button" hidden>Reintentar</button><button class="btn ghost" id="sClose" type="button" hidden>Cerrar</button></div>
+  </div>
+</dialog>
+
+<dialog id="det" aria-labelledby="dname">
+  <button class="x" type="button" id="dx" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg></button>
+  <div class="dimg" id="dimg"></div>
+  <div class="thumbs" id="thumbs"></div>
+  <div class="dbody">
+    <h3 id="dname"></h3>
+    <p class="dcat" id="dcat"></p>
+    <div class="dprice" id="dprice"></div>
+    <div class="stock" id="dstock"></div>
+    <p class="d" id="ddesc"></p>
+    <button class="btn dark" type="button" id="dadd" style="width:100%">Añadir al pedido</button>
+  </div>
+</dialog>
+
+<dialog id="legal" aria-labelledby="lt">
+  <button class="x" type="button" id="lx" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg></button>
+  <h3 id="lt"></h3>
+  <div id="lb"></div>
+</dialog>
+
+<script>
+const BRAND = 'Petalia'; // El nombre se cambia solo aquí
+document.querySelectorAll('[data-brand]').forEach(e => e.textContent = BRAND);
+document.title = BRAND + ' – Plantas y flores';
+
+// Ejemplos: cambia nombres, precios y cantidades. Fotos: guárdalas en una carpeta "img" y usa img:'img/mi-foto.jpg' (portada).
+// Más fotos en el detalle: more:['img/otra.jpg','img/otra2.jpg']. Texto del detalle: desc:'...'
+const FLOWERS = [
+  // kind: orquidea, rosa, suculenta, girasol o jazmin (elige el dibujo; se ignora cuando hay foto). pot:true = en maceta. baby:true = hijo pequeño.
+  {name:'Orquídea (planta)', cat:'Plantas', kind:'orquidea', pot:true, price:2400, stock:2, c:'#d9a7e0', img:'', more:[], desc:'Texto de ejemplo: aquí van el tamaño, los cuidados y la luz que necesita.'},
+  {name:'Rosa (planta)', cat:'Plantas', kind:'rosa', pot:true, price:900, stock:3, c:'#f0adc0', img:'', more:[], desc:'Texto de ejemplo: aquí van el tamaño, los cuidados y la luz que necesita.'},
+  {name:'Orquídea (hijo)', cat:'Hijos', kind:'orquidea', pot:true, baby:true, price:600, stock:5, c:'#d9a7e0', img:'', more:[], desc:'Texto de ejemplo: aquí van el tamaño, los cuidados y la luz que necesita.'},
+  {name:'Suculenta (hijo)', cat:'Hijos', kind:'suculenta', pot:true, baby:true, price:250, stock:12, c:'#7fb08a', img:'', more:[], desc:'Texto de ejemplo: aquí van el tamaño, los cuidados y la luz que necesita.'},
+  {name:'Girasol', cat:'Flores', kind:'girasol', price:350, stock:0, c:'#f2c14e', mid:'#7a4a21', img:'', more:[], desc:'Texto de ejemplo: aquí van el tamaño, los cuidados y la luz que necesita.'},
+  {name:'Jazmín', cat:'Flores', kind:'jazmin', price:500, stock:4, c:'#ffffff', img:'', more:[], desc:'Texto de ejemplo: aquí van el tamaño, los cuidados y la luz que necesita.'}
+];
+const fmt = n => 'RD$ ' + n.toLocaleString('es-DO');
+
+let uid = 0;
+function shade(h, p) {
+  const v = parseInt(h.slice(1), 16), t = p < 0 ? 0 : 255, k = Math.abs(p);
+  const f = s => Math.round(((v >> s) & 255) * (1 - k) + t * k);
+  return `rgb(${f(16)},${f(8)},${f(0)})`;
+}
+function bloom(c, n, mid) {
+  const id = 'g' + uid++, m = mid || '#e9b53a';
+  const petal = (len, w, fill, rot) => `<g transform="rotate(${rot} 50 45)"><path d="M50 45C${50 - w} ${45 - len * .35} ${50 - w * .9} ${45 - len * .85} 50 ${45 - len}C${50 + w * .9} ${45 - len * .85} ${50 + w} ${45 - len * .35} 50 45Z" fill="${fill}"/><path d="M50 43L50 ${50 - len}" stroke="${shade(c, -.4)}" stroke-width=".5" opacity=".45" fill="none"/></g>`;
+  let back = '', mids = '', front = '', dots = '';
+  for (let i = 0; i < n; i++) {
+    back += petal(38, 11, `url(#${id}b)`, i * 360 / n);
+    mids += petal(32, 10, `url(#${id}m)`, i * 360 / n + 180 / n);
+    front += petal(24, 8, `url(#${id}f)`, i * 360 / n);
+  }
+  for (let i = 0; i < 14; i++) {
+    const a = i * 2 * Math.PI / 14, r = 5 + (i % 2) * 1.6;
+    dots += `<circle cx="${(50 + r * Math.cos(a)).toFixed(1)}" cy="${(45 + r * Math.sin(a)).toFixed(1)}" r="1" fill="${shade(m, .5)}"/>`;
+  }
+  const grad = (k, a, b) => `<linearGradient id="${id}${k}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${shade(c, a)}"/><stop offset="1" stop-color="${shade(c, b)}"/></linearGradient>`;
+  return `<svg viewBox="0 0 100 125" aria-hidden="true"><defs>${grad('b', -.42, -.1)}${grad('m', -.22, .12)}${grad('f', -.06, .32)}<radialGradient id="${id}c"><stop offset="0" stop-color="${shade(m, -.5)}"/><stop offset="1" stop-color="${m}"/></radialGradient><linearGradient id="${id}l" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2b6a44"/><stop offset="1" stop-color="#7cbc8a"/></linearGradient></defs><g class="hs">`
+    + `<path d="M50 56C47 84 53 104 50 125" stroke="#3d7a50" stroke-width="3.2" fill="none" stroke-linecap="round"/>`
+    + `<path d="M49 100C36 100 27 92 25 82C37 82 46 88 49 100Z" fill="url(#${id}l)"/><path d="M49 100C42 94 35 88 28 84" stroke="#245c3a" stroke-width=".6" fill="none"/>`
+    + `<path d="M51 88C64 88 73 80 75 70C63 70 54 76 51 88Z" fill="url(#${id}l)"/><path d="M51 88C58 82 65 76 72 72" stroke="#245c3a" stroke-width=".6" fill="none"/>`
+    + `<path d="M50 56Q43 55 40 48M50 56Q57 55 60 48" stroke="#3d7a50" stroke-width="2" fill="none" stroke-linecap="round"/>`
+    + back + mids + front
+    + `<circle cx="50" cy="45" r="8.5" fill="url(#${id}c)"/>${dots}<circle cx="47.5" cy="42.5" r="2" fill="#fff" opacity=".28"/></g></svg>`;
+}
+// ---- Dibujos de cada planta (con animación) ----
+const lg = (id, k, a, b) => `<linearGradient id="${id}${k}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient>`;
+const rg = (id, k, a, b) => `<radialGradient id="${id}${k}" cx=".5" cy=".42" r=".7"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></radialGradient>`;
+const LG = id => `<linearGradient id="${id}l" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2b6a44"/><stop offset="1" stop-color="#7cbc8a"/></linearGradient>`;
+const D = (i, b = .1, st = .06) => `style="--d:${(b + i * st).toFixed(2)}s"`;
+const leaf = (id, d, i) => `<path class="grow" ${D(i, 0, .08)} d="${d}" fill="url(#${id}l)" stroke="#245c3a" stroke-width=".5"/>`;
+const STEM = (d, w = 3.2) => `<path d="${d}" stroke="#3d7a50" stroke-width="${w}" fill="none" stroke-linecap="round"/>`;
+
+function frame(id, defs, plant, o) {
+  const pot = o.pot ? `<defs>${lg(id, 'p', '#a85a39', '#e29a72')}${lg(id, 'q', '#c06d49', '#eeae86')}</defs><path d="M33 100h34l-4 25H37z" fill="url(#${id}p)"/><rect x="29" y="95" width="42" height="8" rx="3" fill="url(#${id}q)"/><ellipse cx="50" cy="97" rx="19" ry="2" fill="#3b2418" opacity=".5"/>` : '';
+  const body = o.pot ? `<g transform="translate(10 8) scale(.8)">${plant}</g>` : plant;
+  const sp = `<g fill="#fff"><circle class="twinkle" cx="20" cy="28" r="1" style="animation-delay:.3s"/><circle class="twinkle" cx="82" cy="20" r="1.2" style="animation-delay:1.2s"/><circle class="twinkle" cx="76" cy="62" r=".9" style="animation-delay:2s"/></g>`;
+  return `<svg viewBox="0 0 100 125" class="fx" aria-hidden="true"><defs>${LG(id)}${defs}</defs>${sp}<g class="sway" style="transform-origin:50px ${o.pot ? 100 : 120}px;animation-delay:-${(uid % 5) * 1.1}s">${body}</g>${pot}</svg>`;
+}
+
+function rosa(f) {
+  const id = 'g' + uid++, c = f.c;
+  const ring = (n, d, rx, ry, a0, k, b) => { let p = ''; for (let i = 0; i < n; i++) p += `<g transform="rotate(${a0 + i * 360 / n} 50 45)"><ellipse class="grow" ${D(i, b)} cx="50" cy="${45 - d}" rx="${rx}" ry="${ry}" fill="url(#${id}${k})" stroke="${shade(c, -.35)}" stroke-width=".5"/></g>`; return p; };
+  const defs = rg(id, 'a', shade(c, .2), shade(c, -.28)) + rg(id, 'b', shade(c, .35), shade(c, -.12)) + rg(id, 'c', shade(c, .5), c);
+  const plant = STEM('M50 56C48 82 52 102 50 125') + `<path d="M50 86l-4.5-2 4.5-1.2zM51 100l4.5-2-4.5-1.2z" fill="#2e6a40"/>`
+    + leaf(id, 'M49 100C36 100 27 92 25 82C37 82 46 88 49 100Z', 0) + leaf(id, 'M51 88C64 88 73 80 75 70C63 70 54 76 51 88Z', 1)
+    + ring(6, 12.5, 12, 15, 0, 'a', .2) + ring(5, 8, 9.5, 11.5, 36, 'b', .55) + ring(4, 4.5, 7, 8.5, 10, 'c', .8)
+    + `<path class="grow" ${D(9)} d="M50 46c-3-2-4-6 0-7 4 0 6 4 3 7-2 2-5 1-6-1" fill="none" stroke="${shade(c, -.45)}" stroke-width=".9" stroke-linecap="round"/>`
+    + `<ellipse class="fall" style="--s:.5s" cx="63" cy="40" rx="2.6" ry="4.2" fill="${shade(c, .25)}"/><ellipse class="fall" style="--s:3.6s" cx="34" cy="48" rx="2.2" ry="3.6" fill="${shade(c, .1)}"/>`;
+  return frame(id, defs, plant, f);
+}
+
+function girasol(f) {
+  const id = 'g' + uid++, c = f.c;
+  const defs = lg(id, 'b', shade(c, -.38), shade(c, -.05)) + lg(id, 'f', shade(c, -.12), shade(c, .3)) + rg(id, 'm', '#7a4a21', '#2b190c');
+  let back = '', front = '', seeds = '';
+  for (let i = 0; i < 16; i++) {
+    back += `<g transform="rotate(${i * 22.5} 50 45)"><path class="grow" ${D(i, .1, .03)} d="M50 45C43 35 44 19 50 10C56 19 57 35 50 45Z" fill="url(#${id}b)"/></g>`;
+    front += `<g transform="rotate(${i * 22.5 + 11.25} 50 45)"><path class="grow" ${D(i, .35, .03)} d="M50 45C44.5 37 45.5 25 50 17C54.5 25 55.5 37 50 45Z" fill="url(#${id}f)"/></g>`;
+  }
+  for (let k = 1; k <= 48; k++) { const r = 1.7 * Math.sqrt(k), a = k * 2.39996; seeds += `<circle cx="${(50 + r * Math.cos(a)).toFixed(1)}" cy="${(45 + r * Math.sin(a)).toFixed(1)}" r=".85" fill="${k % 3 ? '#2b190c' : '#a8743a'}"/>`; }
+  const plant = STEM('M50 56C47 84 53 104 50 125', 4.2) + leaf(id, 'M49 100C30 106 17 92 21 74C38 74 47 84 49 100Z', 0) + leaf(id, 'M51 86C70 90 83 76 81 60C64 62 54 70 51 86Z', 1)
+    + back + front + `<circle class="grow" ${D(0, .5)} cx="50" cy="45" r="12.5" fill="url(#${id}m)"/>` + seeds;
+  return frame(id, defs, plant, f);
+}
+
+function jazmin(f) {
+  const id = 'g' + uid++;
+  const defs = lg(id, 'p', '#e9dbe3', '#ffffff');
+  const flower = (x, y, r, i) => { let p = ''; for (let k = 0; k < 5; k++) p += `<g transform="rotate(${k * 72})"><ellipse class="grow" ${D(i + k * .4, .3, .1)} cx="0" cy="${-(r * .62).toFixed(1)}" rx="${(r * .3).toFixed(1)}" ry="${(r * .62).toFixed(1)}" fill="url(#${id}p)" stroke="#d5c2cd" stroke-width=".4"/></g>`; return `<g transform="translate(${x} ${y})">${p}<circle class="grow" ${D(i, .6)} r="${(r * .15).toFixed(1)}" fill="#f6d36b"/></g>`; };
+  const bud = (x, y, a, i) => `<ellipse class="grow" ${D(i, .5)} cx="${x}" cy="${y}" rx="2" ry="4.4" transform="rotate(${a} ${x} ${y})" fill="#fbf1f5" stroke="#e3b7c8" stroke-width=".5"/>`;
+  const sm = (x, y, a, i) => `<ellipse class="grow" ${D(i, 0, .06)} cx="${x}" cy="${y}" rx="3.4" ry="7" transform="rotate(${a} ${x} ${y})" fill="url(#${id}l)"/>`;
+  const plant = STEM('M50 125C48 100 52 80 50 60', 2.6) + STEM('M50 92C40 82 32 72 28 60', 2) + STEM('M51 80C60 68 68 60 72 48', 2)
+    + sm(44, 106, -50, 0) + sm(57, 100, 50, 1) + sm(38, 84, -60, 2) + sm(62, 72, 55, 3) + sm(33, 70, -35, 4)
+    + flower(50, 52, 14, 0) + flower(28, 52, 10.5, 2) + flower(72, 40, 10, 4) + bud(42, 66, -25, 6) + bud(60, 62, 20, 7) + bud(80, 54, 30, 8)
+    + `<ellipse class="fall" style="--s:1.4s" cx="52" cy="36" rx="2.6" ry="4" fill="#fff"/>`;
+  return frame(id, defs, plant, f);
+}
+
+function orquidea(f) {
+  const id = 'g' + uid++, c = f.c;
+  const defs = rg(id, 'w', shade(c, .45), shade(c, -.15)) + rg(id, 's', shade(c, .35), shade(c, -.25)) + rg(id, 'k', '#ee74c0', '#8a2c6c');
+  const flower = (x, y, s, i) => `<g transform="translate(${x} ${y}) scale(${s})"><g class="grow" ${D(i, .2, .15)}>`
+    + `<ellipse cx="0" cy="-14" rx="7" ry="12" fill="url(#${id}s)"/>`
+    + `<ellipse cx="-8" cy="12" rx="6.5" ry="11" transform="rotate(28 -8 12)" fill="url(#${id}s)"/><ellipse cx="8" cy="12" rx="6.5" ry="11" transform="rotate(-28 8 12)" fill="url(#${id}s)"/>`
+    + `<ellipse cx="-13" cy="-3" rx="13" ry="10.5" transform="rotate(-12 -13 -3)" fill="url(#${id}w)" stroke="${shade(c, -.3)}" stroke-width=".5"/><ellipse cx="13" cy="-3" rx="13" ry="10.5" transform="rotate(12 13 -3)" fill="url(#${id}w)" stroke="${shade(c, -.3)}" stroke-width=".5"/>`
+    + `<path d="M-5 4C-9 9-6 17 0 19C6 17 9 9 5 4C2 6-2 6-5 4Z" fill="url(#${id}k)"/><circle cx="-1.5" cy="12" r=".8" fill="#fff" opacity=".7"/><circle cx="1.8" cy="14" r=".8" fill="#fff" opacity=".7"/><circle cx="0" cy="2" r="3" fill="#f7efe0"/></g></g>`;
+  const L = leaf(id, 'M48 114C26 114 12 102 12 88C30 88 44 100 48 114Z', 0) + leaf(id, 'M52 110C74 110 90 98 90 84C72 84 56 96 52 110Z', 1);
+  const bud = (x, y, i) => `<ellipse class="grow" ${D(i, .6)} cx="${x}" cy="${y}" rx="3.2" ry="4.6" fill="url(#${id}s)"/>`;
+  const plant = f.baby
+    ? `<g transform="translate(50 125) scale(.62) translate(-50 -125)">` + STEM('M50 125C50 112 52 100 56 92', 2.4) + L + bud(57, 90, 3) + `</g>`
+    : STEM('M50 125C50 95 46 72 52 52C56 40 66 36 74 38', 2.6) + L + flower(44, 32, .55, 0) + flower(64, 50, .47, 2) + flower(36, 60, .4, 4) + bud(76, 34, 6) + bud(81, 44, 7);
+  return frame(id, defs, plant, f);
+}
+
+function suculenta(f) {
+  const id = 'g' + uid++, c = f.c, tip = '#e8a2b6';
+  const defs = lg(id, 'a', shade(c, -.35), shade(c, .05)) + lg(id, 'b', shade(c, -.2), shade(c, .2));
+  const layer = (n, len, w, a0, k, b) => { let p = ''; for (let i = 0; i < n; i++) p += `<g transform="rotate(${a0 + i * 360 / n} 50 72)"><g class="grow" ${D(i, b, .04)}><path d="M50 72C${50 - w} ${72 - len * .45} ${50 - w * .7} ${72 - len * .9} 50 ${72 - len}C${50 + w * .7} ${72 - len * .9} ${50 + w} ${72 - len * .45} 50 72Z" fill="url(#${id}${k})" stroke="${shade(c, -.4)}" stroke-width=".5"/><ellipse cx="50" cy="${72 - len + 3.2}" rx="1.8" ry="3.4" fill="${tip}" opacity=".75"/></g></g>`; return p; };
+  let plant = STEM('M50 72V125', 5) + layer(10, 30, 11, 0, 'a', 0) + layer(8, 24, 10, 22, 'b', .25) + layer(6, 17, 8, 0, 'b', .45) + layer(5, 10, 6, 36, 'b', .6) + `<circle class="grow" ${D(0, .8)} cx="50" cy="72" r="3" fill="${shade(c, .35)}"/>`;
+  if (f.baby) plant = `<g transform="translate(50 125) scale(.62) translate(-50 -125)">${plant}</g>`;
+  return frame(id, defs, plant, f);
+}
+
+const ART = {orquidea, rosa, suculenta, girasol, jazmin};
+const art = f => (ART[f.kind] || (g => bloom(g.c, g.n || 10, g.mid)))(f);
+let term = '';
+
+document.getElementById('heroBloom').innerHTML = bloom('#f0adc0', 12);
+
+const cats = ['Todo', 'Plantas', 'Hijos', 'Flores'];
+let current = 'Todo';
+const cart = {};
+const $ = id => document.getElementById(id);
+const chips = $('chips'), grid = $('grid'), dlg = $('dlg'), msg = $('msg');
+
+function render() {
+  chips.innerHTML = cats.map(c => `<button class="chip" aria-pressed="${c === current}" data-c="${c}">${c} (${c === 'Todo' ? FLOWERS.length : FLOWERS.filter(f => f.cat === c).length})</button>`).join('');
+  grid.innerHTML = FLOWERS.map((f, i) => ({f, i})).filter(x => (current === 'Todo' || x.f.cat === current) && x.f.name.toLowerCase().includes(term)).map(({f, i}) => {
+    const s = f.stock === 0 ? ['Agotado', 'out'] : f.stock <= 3 ? [`Quedan ${f.stock}`, 'low'] : [`Disponibles: ${f.stock}`, ''];
+    const pic = f.img ? `<img src="${f.img}" alt="${f.name}" loading="lazy">` : art(f);
+    return `<article class="item ${s[1]}" style="--c:${f.c}"><div class="arch fxw" role="button" tabindex="0" data-v="${i}" aria-label="Ver detalles de ${f.name}">${pic}</div><h3 data-v="${i}">${f.name}</h3><div class="price">${fmt(f.price)}</div><div class="stock ${s[1]}">${s[0]}</div><button class="btn dark sm" data-i="${i}" ${f.stock === 0 ? 'disabled' : ''}>Añadir</button></article>`;
+  }).join('');
+  watch();
+}
+
+function total() { return Object.keys(cart).reduce((t, i) => t + cart[i] * FLOWERS[i].price, 0); }
+function count() { return Object.values(cart).reduce((a, b) => a + b, 0); }
+
+function drawCart() {
+  const k = count();
+  if (k > (drawCart.k || 0)) { const pb = $('openCart'); pb.classList.remove('pop'); void pb.offsetWidth; pb.classList.add('pop'); }
+  drawCart.k = k;
+  $('cartbar').classList.toggle('on', k > 0);
+  $('openCart').textContent = `Ver mi pedido (${k}) · ${fmt(total())}`;
+  const ids = Object.keys(cart);
+  $('lines').innerHTML = ids.length ? ids.map(i => `<li><div><b>${FLOWERS[i].name}</b><br><small>${fmt(FLOWERS[i].price)} c/u</small></div><div class="step"><button type="button" data-a="-1" data-i="${i}" aria-label="Quitar uno">−</button><span>${cart[i]}</span><button type="button" data-a="1" data-i="${i}" aria-label="Añadir uno">+</button></div></li>`).join('') : '<li>Tu pedido está vacío.</li>';
+  $('tot').textContent = fmt(total());
+  $('send').disabled = !ids.length;
+}
+function change(i, d) {
+  const n = Math.min((cart[i] || 0) + d, FLOWERS[i].stock);
+  if (n <= 0) delete cart[i]; else cart[i] = n;
+  drawCart();
+}
+
+chips.addEventListener('click', e => { const b = e.target.closest('[data-c]'); if (b) { current = b.dataset.c; render(); } });
+grid.addEventListener('click', e => {
+  const b = e.target.closest('[data-i]'); if (b) { change(b.dataset.i, 1); b.textContent = '¡Añadido!'; setTimeout(() => { if (b.isConnected) b.textContent = 'Añadir'; }, 900); return; }
+  const v = e.target.closest('[data-v]'); if (v) openDetail(v.dataset.v);
+});
+grid.addEventListener('keydown', e => { const v = e.target.closest('.arch[data-v]'); if (v && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openDetail(v.dataset.v); } });
+$('lines').addEventListener('click', e => { const b = e.target.closest('[data-a]'); if (b) change(b.dataset.i, +b.dataset.a); });
+$('openCart').onclick = () => { msg.textContent = ''; setState('form'); dlg.showModal(); };
+$('cancel').onclick = () => dlg.close();
+const sel = () => document.querySelector('input[name="e"]:checked').value;
+document.querySelectorAll('input[name="e"]').forEach(r => r.onchange = () => {
+  const d = sel() === 'd';
+  $('addr').hidden = !d; $('a').required = d;
+  $('hint').textContent = d ? '*Entrega local solo en Los Limones, Montecristi.' : 'Te enviaremos la ubicación por WhatsApp para recogerlo.';
+});
+
+let lastText = '', busy = false;
+const wait = ms => new Promise(r => setTimeout(r, ms));
+
+// DEMO: simula el envío. En la versión real, usa el fetch a ntfy (descomentarlo y borrar el return wait).
+// El panel de carga solo se quita cuando ntfy responde que recibió el pedido (r.ok); si falla, avisa y deja reintentar.
+function send(texto) {
+  // return fetch('https://ntfy.sh/TU-TEMA-LARGO', {method:'POST', body:texto, headers:{Title:'Nuevo pedido'}}).then(r => { if (!r.ok) throw new Error('fallo'); });
+  return wait(1500);
+}
+
+$('scene').innerHTML = `<svg class="mail" viewBox="0 0 200 150" aria-hidden="true"><g class="env"><rect class="bk" x="40" y="60" width="120" height="70" rx="8"/><g class="fl"><svg x="78" y="6" width="44" height="55">${bloom('#f0adc0', 8)}</svg></g><path class="fr" d="M40 68L100 110L160 68V122a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8Z"/><path class="fp" d="M40 60L100 104L160 60Z"/></g></svg>`;
+
+function setState(s) {
+  $('form').hidden = s !== 'form';
+  $('sending').hidden = s === 'form';
+  $('scene').hidden = s !== 'sending';
+  $('prog').hidden = s !== 'sending';
+  $('okIcon').hidden = s !== 'ok';
+  $('retry').hidden = s !== 'err';
+  $('sClose').hidden = s === 'sending';
+  $('cx').hidden = s === 'sending';
+  $('sTxt').textContent = {sending: 'Enviando tu pedido…', ok: '¡Pedido recibido! Te confirmaremos pronto.', err: 'No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.'}[s] || '';
+  $('sSum').textContent = s === 'ok' ? lastText : '';
+}
+async function run() {
+  busy = true; setState('sending');
+  try {
+    await Promise.all([send(lastText), wait(2800)]); // mínimo un ciclo de animación
+    setState('ok');
+    Object.keys(cart).forEach(i => delete cart[i]);
+    drawCart();
+  } catch (err) { setState('err'); }
+  busy = false;
+}
+dlg.addEventListener('cancel', e => { if (busy) e.preventDefault(); });
+$('retry').onclick = run;
+$('sClose').onclick = () => dlg.close();
+
+function trySend() {
+  const n = $('n').value.trim(), t = $('t').value.trim(), d = sel() === 'd', a = $('a').value.trim();
+  const bad = !n ? $('n') : t.replace(/\D/g, '').length < 7 ? $('t') : d && !a ? $('a') : null;
+  msg.className = bad ? 'err' : '';
+  msg.textContent = !bad ? '' : bad === $('n') ? 'Escribe tu nombre.' : bad === $('t') ? 'Escribe un teléfono válido.' : 'Escribe tu dirección en Los Limones.';
+  if (bad) { bad.focus(); return; }
+  if (!count()) return;
+  const items = Object.keys(cart).map(i => `${FLOWERS[i].name} ×${cart[i]}`).join(', ');
+  const entrega = d ? 'Entrega en Los Limones: ' + a : 'Recoge en tienda (enviar ubicación por WhatsApp)';
+  lastText = `${items}. Total ${fmt(total())}. ${n}, tel. ${t}. ${entrega}.`;
+  run();
+}
+$('send').onclick = trySend;
+$('form').addEventListener('submit', e => { e.preventDefault(); trySend(); });
+
+// Pon aquí el número de WhatsApp con código de país, sin + ni espacios (ej. 18095551234)
+const WHATSAPP = '18090000000';
+$('wa').href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Hola, quiero información sobre sus plantas y flores.');
+$('wa').target = '_blank'; $('wa').rel = 'noopener';
+
+// ---- Detalle de cada planta ----
+const det = $('det');
+let dIdx = 0, curPics = [];
+function detailPic(f, k) {
+  const box = $('dimg');
+  box.classList.add('fxw', 'in');
+  box.classList.toggle('photo', curPics.length > 0);
+  box.style.setProperty('--c', f.c);
+  box.innerHTML = curPics.length ? `<img src="${curPics[k]}" alt="${f.name}">` : art(f);
+  $('thumbs').innerHTML = curPics.length > 1 ? curPics.map((p, j) => `<button type="button" data-k="${j}" aria-label="Foto ${j + 1}" aria-pressed="${j === k}"><img src="${p}" alt=""></button>`).join('') : '';
+}
+function openDetail(i) {
+  dIdx = +i; const f = FLOWERS[dIdx];
+  curPics = [f.img, ...(f.more || [])].filter(Boolean);
+  detailPic(f, 0);
+  const s = f.stock === 0 ? ['Agotado', 'out'] : f.stock <= 3 ? [`Quedan ${f.stock}`, 'low'] : [`Disponibles: ${f.stock}`, ''];
+  $('dname').textContent = f.name;
+  $('dcat').textContent = f.cat;
+  $('dprice').textContent = fmt(f.price);
+  $('dstock').textContent = s[0];
+  $('dstock').className = 'stock ' + s[1];
+  $('ddesc').textContent = f.desc || 'Pronto agregaremos más detalles.';
+  $('dadd').disabled = f.stock === 0;
+  $('dadd').textContent = f.stock === 0 ? 'Agotado' : 'Añadir al pedido';
+  det.showModal();
+  det.scrollTop = 0;
+}
+$('thumbs').onclick = e => { const b = e.target.closest('[data-k]'); if (b) detailPic(FLOWERS[dIdx], +b.dataset.k); };
+$('dadd').onclick = () => { change(dIdx, 1); det.close(); };
+$('dx').onclick = () => det.close();
+det.addEventListener('click', e => { if (e.target === det) det.close(); });
+$('cx').onclick = () => { if (!busy) dlg.close(); };
+
+// ---- Privacidad y Términos (borradores) ----
+const LEGAL = {
+  p: ['Política de privacidad', [
+    'Usamos tu nombre, teléfono y dirección (si pides entrega) solo para confirmar y entregar tu pedido.',
+    'No vendemos tus datos. Solo los ven los servicios que hacen funcionar la web, como el alojamiento y los avisos de pedidos.',
+    'Si más adelante inicias sesión con Google para comentar, mostraremos tu nombre y tu foto de perfil junto a tu comentario.',
+    'Puedes pedir que borremos tus datos escribiéndonos por WhatsApp.']],
+  t: ['Términos y condiciones', [
+    'Los precios y las cantidades disponibles pueden cambiar. Tu pedido se confirma cuando te contactamos.',
+    'Las plantas son seres vivos: pueden variar un poco en tamaño y color respecto a las fotos.',
+    'Las entregas son solo en Los Limones, Montecristi. Para recoger, te enviaremos la ubicación por WhatsApp.',
+    'Los textos, las fotos y el diseño de esta web tienen derechos de autor y no se pueden copiar sin permiso.']]
+};
+const legal = $('legal');
+document.querySelectorAll('[data-l]').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  const [t, items] = LEGAL[a.dataset.l];
+  $('lt').textContent = t;
+  $('lb').replaceChildren(...items.map(x => Object.assign(document.createElement('p'), {textContent: x})),
+    Object.assign(document.createElement('p'), {className: 'borrador', textContent: 'Borrador: debe revisarse con un profesional antes de publicarse.'}));
+  legal.showModal(); legal.scrollTop = 0;
+}));
+$('lx').onclick = () => legal.close();
+legal.addEventListener('click', e => { if (e.target === legal) legal.close(); });
+
+// ---- Búsqueda, animaciones al aparecer ----
+$('find').addEventListener('input', e => { term = e.target.value.trim().toLowerCase(); render(); });
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {threshold: .12}) : null;
+function watch() { document.querySelectorAll('.fxw:not(.in)').forEach(el => io ? io.observe(el) : el.classList.add('in')); }
+if (io && !reduce) document.querySelectorAll('main section').forEach(sec => { sec.classList.add('rv'); io.observe(sec); });
+
+render();
+drawCart();
+</script>
+</body>
+</html>
